@@ -1,0 +1,80 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven { url = uri("https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea") }
+        maven {
+            url = uri("https://maven.pkg.github.com/cloudx-xenoss/cloudexchange.android.sdk")
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull
+                        ?: System.getenv("GITHUB_ACTOR") ?: System.getenv("PAT_USERNAME")
+                password = providers.gradleProperty("gpr.key").orNull
+                        ?: System.getenv("GITHUB_TOKEN") ?: System.getenv("PAT_TOKEN")
+            }
+        }
+        maven {
+            url = uri("https://maven.pkg.github.com/cloudx-xenoss/cloudxchange.android.adapter-meta")
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull
+                        ?: System.getenv("GITHUB_ACTOR") ?: System.getenv("PAT_USERNAME")
+                password = providers.gradleProperty("gpr.key").orNull
+                        ?: System.getenv("GITHUB_TOKEN") ?: System.getenv("PAT_TOKEN")
+            }
+        }
+        maven {
+            url = uri("https://maven.pkg.github.com/cloudx-xenoss/cloudxchange.android.adapter-mintegral")
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull
+                        ?: System.getenv("GITHUB_ACTOR") ?: System.getenv("PAT_USERNAME")
+                password = providers.gradleProperty("gpr.key").orNull
+                        ?: System.getenv("GITHUB_TOKEN") ?: System.getenv("PAT_TOKEN")
+            }
+        }
+        maven {
+            url = uri("https://maven.pkg.github.com/cloudx-xenoss/cloudxchange.android.adapter-cloudx")
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull
+                        ?: System.getenv("GITHUB_ACTOR") ?: System.getenv("PAT_USERNAME")
+                password = providers.gradleProperty("gpr.key").orNull
+                        ?: System.getenv("GITHUB_TOKEN") ?: System.getenv("PAT_TOKEN")
+            }
+        }
+        maven {
+            url = uri("https://maven.pkg.github.com/cloudx-xenoss/cloudxchange.android.adapter-testbidder")
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull
+                        ?: System.getenv("GITHUB_ACTOR") ?: System.getenv("PAT_USERNAME")
+                password = providers.gradleProperty("gpr.key").orNull
+                        ?: System.getenv("GITHUB_TOKEN") ?: System.getenv("PAT_TOKEN")
+            }
+        }
+        maven {
+            url = uri("https://maven.pkg.github.com/cloudx-xenoss/cloudxchange.android.adapter-google")
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull
+                        ?: System.getenv("GITHUB_ACTOR") ?: System.getenv("PAT_USERNAME")
+                password = providers.gradleProperty("gpr.key").orNull
+                        ?: System.getenv("GITHUB_TOKEN") ?: System.getenv("PAT_TOKEN")
+            }
+        }
+    }
+}
+
+
+rootProject.name = "cloudx-demo-java"
+include ':app'
