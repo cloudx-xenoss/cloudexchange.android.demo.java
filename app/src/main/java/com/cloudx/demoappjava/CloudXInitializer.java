@@ -48,7 +48,7 @@ public final class CloudXInitializer {
         CloudXLogger.INSTANCE.info(logTag, "CloudX privacy set: " + privacy, false);
         CloudX.setPrivacy(privacy);
 
-        CloudX.initialize(activity, new CloudX.InitializationParams("JP61DHwkf7zPcDN_lrt32", settings.getInitUrl(), hashedUserId), result -> {
+        CloudX.initialize(activity, new CloudX.InitializationParams(settings.getAppKey(), settings.getInitUrl(), hashedUserId), result -> {
             if (result.getInitialized()) {
                 initState = InitializationState.Initialized;
             } else {

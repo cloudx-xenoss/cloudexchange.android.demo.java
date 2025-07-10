@@ -35,7 +35,7 @@ android {
 
 dependencies {
 
-    implementation("com.cloudx:cloudx-sdk:v0.0.1.19")
+    implementation("com.cloudx:cloudx-sdk:v0.0.1.21")
     implementation("com.cloudx.adapter:adapter-cloudx:v0.0.1.10")
     implementation("com.cloudx.adapter:adapter-meta:v0.0.1.10")
     implementation("com.cloudx.adapter:adapter-google:v0.0.1.10")
