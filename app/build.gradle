@@ -35,12 +35,13 @@ android {
 
 dependencies {
 
-    implementation("com.cloudx:cloudx-sdk:v0.0.1.21")
-    implementation("com.cloudx.adapter:adapter-cloudx:v0.0.1.10")
-    implementation("com.cloudx.adapter:adapter-meta:v0.0.1.10")
-    implementation("com.cloudx.adapter:adapter-google:v0.0.1.10")
-    implementation("com.cloudx.adapter:adapter-mintegral:v0.0.1.10")
-    implementation("com.cloudx.adapter:adapter-testbidder:v0.0.1.24")
+    implementation "io.cloudx:sdk:0.0.1.34"
+    implementation "io.cloudx:adapter-google:v0.0.1.14"
+    implementation "io.cloudx:adapter-cloudx:0.0.1.00"
+    implementation "io.cloudx:adapter-meta:0.0.1.00"
+    implementation "io.cloudx:adapter-mintegral:0.0.1.00"
+    implementation "io.cloudx:adapter-testbidder:0.0.1.27"
+
 
     implementation libs.recyclerview
     implementation libs.datastore
